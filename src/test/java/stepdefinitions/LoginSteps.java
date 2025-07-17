@@ -1,7 +1,5 @@
 package stepdefinitions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -15,17 +13,7 @@ public class LoginSteps {
 
     WebDriver driver;
     LoginPage loginPage;
-
-    @Before
-    public void setup() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
-
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
+   
 
     @Given("user is on the login page")
     public void userIsOnLoginPage() {
